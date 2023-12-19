@@ -13,6 +13,11 @@ app.use(cors())
 app.use('/polyline',GoogleRoute)
 app.use('/polyline',TollGuruRoute)
 
-app.listen(process.env.PORT || 2000, () => {
+let start=()=>
+  {
+    app.listen(process.env.PORT || 2000, () => {
   console.log(`Listening to port ${process.env.PORT || 2000}`);
 });
+  }
+
+start()
